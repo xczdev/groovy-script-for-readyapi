@@ -1,3 +1,12 @@
+// Project Property
+
+def getProjectPropertyValue(String prop_name) {
+    String prop_value = context.testCase.testSuite.project.getPropertyValue(prop_name)
+    log.info("Call 'getProjectPropertyValue' : $prop_name = $prop_value")
+    return prop_value
+}
+
+// Test Suite properties
 def getTestSuitePropertyValue(String prop_name) {
     String prop_value = context.testCase.testSuite.getPropertyValue(prop_name)
     log.info("Call 'getTestSuitePropertyValue' : $prop_name = $prop_value")
